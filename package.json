@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "babel ./src -d ./dist && npx copyfiles -f ./src/*.css ./dist && npx copyfiles -f ./src/*.json ./dist && npx copyfiles -f ./src/*.gif ./dist && npx copyfiles -f ./src/*.png ./dist"
+  },
+  "name": "nigger_map",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./DraggableMarker": "./dist/DraggableMarker.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "copyfiles": "^2.4.1",
+    "cpy-cli": "^5.0.0",
+    "css-loader": "^6.8.1",
+    "ncp": "^2.0.0",
+    "style-loader": "^3.3.3"
+  }
+}
